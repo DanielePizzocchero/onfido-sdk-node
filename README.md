@@ -1,5 +1,5 @@
 # Onfido Studio Web SDK
-This is a Node.js application that uses the Onfido API to create an applicant, generate an SDK token, and create a new workflow run id. The application allows users to input their first name, last name and workflow id, and then initialises the SDK on the page.
+This is a Node.js application that uses the Onfido API to create an applicant, generate an SDK token. The application allows users to input their first name, last name and then initialises the SDK on the page.
 
 ## Requirements
 - Node.js
@@ -30,7 +30,7 @@ npm start
 5. Visit http://localhost:3000 in your browser to access the application
 
 ## Usage
-1. Input your first name, last name and workflow id in the form
+1. Input your first name, last name in the form
 2. Click the submit button
 3. The SDK will be initialised and displayed on the page
 
