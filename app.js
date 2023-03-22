@@ -20,7 +20,7 @@ app.post('/submit', async (req, res) => {
   try {
     const firstName = req.body.firstName;
     const lastName = req.body.lastName;
-    const workflowId = req.body.workflowId;
+    //const workflowId = req.body.workflowId;
 
     const applicant = await onfido.applicant.create({
       firstName: firstName,
@@ -33,16 +33,19 @@ app.post('/submit', async (req, res) => {
       referrer: "*://*/*"
     });
 
+    /*
     const workflowRun = await onfido.workflowRun.create({
       applicantId: applicant.id,
       workflowId: workflowId
     });
+    */
 
-    const workflowRunId = workflowRun.id;
-
+    //const workflowRunId = workflowRun.id;
+   
     res.render('index', { 
       sdkToken: generateSdkToken, 
-      workflowRunId: workflowRunId 
+      //workflowRunId: workflowRunId 
+      
     });
   } catch (error) {
     if (error instanceof OnfidoApiError) {
