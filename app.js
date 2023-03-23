@@ -4,10 +4,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 const ejs = require('ejs');
 const { Onfido, Region, OnfidoApiError } = require("@onfido/api");
-const onfido = new Onfido({
-  apiToken: process.env.ONFIDO_API_TOKEN,
-  region: Region.EU
-});
+
 
 
 app.set('view engine', 'ejs');
@@ -21,6 +18,13 @@ app.post('/submit', async (req, res) => {
     const firstName = req.body.firstName;
     const lastName = req.body.lastName;
     //const workflowId = req.body.workflowId;
+    const apiToken = req.body.apiToken
+
+    const onfido = new Onfido({
+      //apiToken: process.env.ONFIDO_API_TOKEN,
+      apiToken: apiToken,
+      region: Region.EU
+    });
 
     const applicant = await onfido.applicant.create({
       firstName: firstName,
