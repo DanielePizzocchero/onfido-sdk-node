@@ -13,6 +13,17 @@ app.get('/', (req, res) => {
   res.render('form');
 });
 
+app.post('/check',  async (req, res) => {
+
+
+
+
+  
+ });
+
+
+
+
 app.post('/submit', async (req, res) => {
   try {
     const firstName = req.body.firstName;

@@ -19,7 +19,8 @@
         token: "<%= sdkToken %>",
         containerId: 'onfido-mount',
         onComplete: function (data) {
-          console.log('everything is complete')
+          console.log("Captured data: ")
+          console.log(data)
         },
         steps: [
            'welcome',
