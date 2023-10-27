@@ -31,6 +31,7 @@ app.post('/submit', async (req, res) => {
       lastName: lastName, 
     });
     const applicantId = applicant.id;
+    console.log("applicant id: " + applicantId)
 
     const generateSdkToken = await onfido.sdkToken.generate({
       applicantId: applicantId,
@@ -48,6 +49,7 @@ app.post('/submit', async (req, res) => {
    
     res.render('index', { 
       sdkToken: generateSdkToken, 
+      applicantId: applicantId
       //workflowRunId: workflowRunId 
       
     });
