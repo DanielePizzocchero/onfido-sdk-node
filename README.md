@@ -1,5 +1,6 @@
 # Onfido Studio Web SDK
 This is a Node.js application that uses the Onfido API to create an applicant, generate an SDK token. The application allows users to input their first name, last name and then initialises the SDK on the page.
+The flow is set to capture doc and selfie. 
 
 ## Requirements
 - Node.js
